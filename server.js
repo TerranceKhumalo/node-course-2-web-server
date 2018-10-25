@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const hbs = require("hbs");
 const fs = require("fs");
-const PORT = 3000;  
+const port = process.env.PORT || 3000;  
 
 /**---------------------------- */
 
@@ -67,6 +67,6 @@ app.get("/about", (req, res)=>{
     });
 });
 
-app.listen(PORT,()=>{
-    console.log(`Listing to port ${PORT}`);
+app.listen(port,()=>{
+    console.log(`Listing to port ${port}`);
 });
